@@ -1,0 +1,21 @@
+{
+  "name": "videochat",
+  "version": "1.0.0",
+  "description": "This is the video chat module for the final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "signaling_server": "node ./node_modules/socketio-over-nodejs/signaler.js",
+    "start" : "node index.js"
+  },
+  "keywords": [
+    "video",
+    "webrtc"
+  ],
+  "author": "abhiyan timilsina",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socketio-over-nodejs": "^3.0.2"
+  }
+}

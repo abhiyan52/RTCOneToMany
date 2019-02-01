@@ -1,0 +1,63 @@
+﻿
+<!DOCTYPE html>
+<html id="home" lang="en">
+
+    <head>
+        <script>
+            console.log(location.href)
+            if(!location.hash.replace('#', '').length) {
+                location.href = location.href.split('#')[0] + '#' + (Math.random() * 100).toString().replace('.', '');
+                
+                location.reload();
+            }
+        </script>
+
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+      <style>
+        #hostVideo{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            filter: grayscale(100%)
+        }
+      </style>
+    </head>
+    <body>
+            
+
+            <table class="visible">
+                <tr>
+                    <td style="text-align: right;">
+                        <input type="text" id="conference-name" placeholder="Broadcast Name">
+                    </td>
+                    <td>
+                        <button id="start-conferencing">New Broadcast</button>
+                    </td>
+                </tr>
+            </table>
+            <table id="rooms-list" class="visible"></table>
+            <div id="participants">
+
+            </div>
+
+            <div id="hostVideo">
+
+            </div>
+
+            <script src="./js/lib/adapter.js"></script>
+            <script src="./js/lib/socketio.js"> </script>
+            <script src="./js/lib/RTCPeerConnection.js"> </script>
+            <script src="./js/broadcast.js"> </script>
+            <script src="./js/broadcast-ui.js"> </script>
+        </article>
+        </footer>
+    
+      
+    </body>
+</html>
